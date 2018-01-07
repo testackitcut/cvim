@@ -1,0 +1,38 @@
+let scrollstep = 550
+
+"C-nで選択出来るようにする
+"ブラウザのキーボードショートカットが優先されるので、変更します。
+"1.chrome://extensions へ移動
+"2.右下のキーボードショートカットを押す
+"3.cVimの、Let Chrome use for cncpcompletion settingの項目で、Ctrl+Nに設定する
+"set cncpcompletion
+
+" Characters for Hit-a-Hint (Default: "asdfgqwertzxcvb")
+let hintcharacters = "hjklasdfgyuiepqwortnmzxcvb"
+
+" ページを開いた時のフォーカスを無効にする
+set noautofocus
+
+" uで最後に閉じたタブを復元
+map u lastClosedTab
+
+" ]]でURLをインクリメント
+map ]] incrementURLPath
+
+" [[でURLをデクリメント
+map [[ decrementURLPath
+
+" Yank current url
+map y yankDocumentUrl
+
+"デフォルトエンジンの設定
+let locale = "jp"
+
+" completionengines
+let completionengines = ["google"]
+" defaultengine
+let defaultengine = "google.co.jp"
+" a でalcを検索
+" alc
+let searchengine alc = "https://eow.alc.co.jp/search?q=%s"
+let searchalias a = "alc"
